@@ -1,0 +1,24 @@
+version: 2
+
+# Keep dependencies fresh on a weekly cadence. Dependabot's security
+# updates are configured separately in the repo's Code security
+# settings (https://github.com/AutanaSoft/angular-primeng-template/settings/security_analysis)
+# and run automatically whenever a CVE is published against any
+# package in the lockfile.
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    groups:
+      production-dependencies:
+        dependency-type: "production"
+      development-dependencies:
+        dependency-type: "development"
+    commit-message:
+      prefix: "chore(deps)"
+    labels:
+      - "dependencies"
+      - "chore"
