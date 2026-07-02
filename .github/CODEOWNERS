@@ -1,0 +1,10 @@
+# CODEOWNERS
+# Auto-assigns reviewers on PRs that touch these paths.
+# One entry per line: pattern followed by one or more owners.
+#
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default: everything in the repo is owned by the AutanaSoft org.
+# When additional maintainers join, replace this with a team slug
+# (e.g. @AutanaSoft/maintainers) once the team is created.
+*       @AutanaSoft
