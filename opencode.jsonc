@@ -1,0 +1,12 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    // Angular CLI MCP — herramientas para generación de código,
+    // migraciones y consultas sobre el workspace Angular.
+    "angular-cli": {
+      "type": "local",
+      "command": ["npx", "-y", "@angular/cli", "mcp"],
+      "enabled": true,
+    },
+  },
+}

@@ -1,0 +1,14 @@
+<p-selectbutton
+  [options]="options"
+  optionLabel="label"
+  optionValue="value"
+  [ngModel]="theme()"
+  (ngModelChange)="theme.set($event)"
+  [allowEmpty]="false"
+  aria-label="Color theme"
+>
+  <ng-template let-option #item>
+    <i [class]="option.icon" aria-hidden="true"></i>
+    <span class="ml-2">{{ option.label }}</span>
+  </ng-template>
+</p-selectbutton>

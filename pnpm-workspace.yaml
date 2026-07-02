@@ -1,0 +1,21 @@
+# Pnpm 11+ settings. Esta config NO va en .npmrc — solo auth/registry van ahí.
+# Ver https://pnpm.io/settings
+
+# Build scripts permitidos. Sin esto, pnpm 11+ bloquea los binarios nativos
+# que Angular CLI necesita (esbuild, watcher, etc.). `onlyBuiltDependencies`
+# ya no existe en v11; fue reemplazado por `allowBuilds`.
+allowBuilds:
+  esbuild: true
+  lmdb: true
+  msgpackr-extract: true
+  '@parcel/watcher': true
+
+# Pnpm 11+ exige por defecto que los paquetes tengan al menos 1 día (1440 min)
+# de publicados. Lo dejamos en 0 para no romper `install` cuando salen
+# releases nuevas de Angular el mismo día.
+minimumReleaseAge: 0
+
+# Belt-and-suspenders: pnpm 11.x ya rechaza el root project cuando `engines.node`
+# no se cumple. `engineStrict: true` además hace fallar a las deps transitivas
+# que declaren `engines` incompatibles. Ver https://pnpm.io/settings.
+engineStrict: true

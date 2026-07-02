@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'tailwindcss';
+@import 'tailwindcss-primeui';
+@import 'primeicons/primeicons.css';
+
+@layer theme, base, primeng, components, utilities;
+
+@layer base {
+  html,
+  body {
+    /* Pull the page background from PrimeNG's surface scale so the body
+     * tracks the active theme (light <-> dark) without a hand-rolled
+     * background-color per mode.
+     */
+    background: var(--p-content-background);
+    color: var(--p-text-color);
+    min-height: 100vh;
+  }
+}

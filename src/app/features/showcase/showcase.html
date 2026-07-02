@@ -1,0 +1,75 @@
+<section class="mx-auto max-w-3xl space-y-8 p-8">
+  <header>
+    <p class="text-muted-color text-xs tracking-widest uppercase">Starter Kit</p>
+    <h1 class="mt-1 text-3xl font-semibold">Angular PrimeNG Template</h1>
+    <p class="text-muted-color mt-2 text-sm">
+      Angular 22 · PrimeNG 22 · Aura preset · Tokyo Night palette
+    </p>
+    <div class="mt-4 flex justify-end">
+      <app-theme-switcher />
+    </div>
+  </header>
+
+  <p-card>
+    <ng-template #header>
+      <div class="flex items-center gap-3 px-6 pt-6">
+        <i class="pi pi-bolt text-2xl" aria-hidden="true"></i>
+        <h2 class="m-0 text-xl font-semibold">Counter playground</h2>
+        <p-tag value="Aura · Tokyo Night" severity="info" />
+      </div>
+    </ng-template>
+
+    <p class="text-muted-color -mt-2 px-6 text-sm">
+      Click the button. Watch the dial fill. Type something. Reset.
+    </p>
+
+    <div class="flex flex-col items-center gap-6 px-6 pt-4 pb-2">
+      <p-knob
+        [(ngModel)]="knobValue"
+        [min]="0"
+        [max]="knobMax"
+        [size]="180"
+        [valueColor]="knobValueColor"
+        [rangeColor]="knobRangeColor"
+        [textColor]="knobTextColor()"
+        ariaLabel="Click counter"
+      />
+      <p-tag severity="success" [value]="milestoneLabel()" styleClass="font-mono" />
+    </div>
+
+    <div class="px-6 pb-2">
+      <p-iconfield iconPosition="left">
+        <p-inputicon styleClass="pi pi-pencil" />
+        <input
+          pInputText
+          type="text"
+          [ngModel]="draft()"
+          (ngModelChange)="draft.set($event)"
+          placeholder="Type something"
+          aria-label="Sample input"
+        />
+        @if (draft()) {
+          <p-inputicon styleClass="pi pi-times cursor-pointer" (click)="clearDraft()" />
+        }
+      </p-iconfield>
+    </div>
+
+    <ng-template #footer>
+      <div class="flex items-center gap-3 px-6 pb-6">
+        <p-button label="Increment" icon="pi pi-plus" (onClick)="onClick()" />
+        <p-divider layout="vertical" />
+        <p-button
+          label="Reset"
+          icon="pi pi-refresh"
+          severity="secondary"
+          outlined
+          (onClick)="onReset()"
+        />
+        <div class="grow"></div>
+        <p class="text-muted-color m-0 text-xs">Free under MIT · No external assets</p>
+      </div>
+    </ng-template>
+  </p-card>
+
+  <p-toast position="bottom-right" />
+</section>

@@ -1,0 +1,59 @@
+name: Bug Report
+description: Report something that doesn't work as expected.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Please fill in the sections below.
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction steps
+      description: Minimal steps to reproduce the behavior.
+      placeholder: |
+        1. Clone the repo
+        2. Run `pnpm install`
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+
+  - type: input
+    id: node
+    attributes:
+      label: Node version
+      placeholder: "v22.x.x"
+
+  - type: input
+    id: pnpm
+    attributes:
+      label: pnpm version
+      placeholder: "11.x.x"
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Where the bug shows up
+      options:
+        - Dev server (ng serve)
+        - Production build (ng build)
+        - Unit tests
+        - Theme switcher
+        - Accessibility (axe-core)
+        - Other
