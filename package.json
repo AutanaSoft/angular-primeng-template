@@ -16,15 +16,15 @@
     "pnpm": ">=11.9.0"
   },
   "dependencies": {
-    "@angular/common": "^22.0.0",
-    "@angular/compiler": "^22.0.0",
-    "@angular/core": "^22.0.0",
-    "@angular/forms": "^22.0.0",
-    "@angular/platform-browser": "^22.0.0",
-    "@angular/router": "^22.0.0",
+    "@angular/common": "^22.0.6",
+    "@angular/compiler": "^22.0.6",
+    "@angular/core": "^22.0.6",
+    "@angular/forms": "^22.0.6",
+    "@angular/platform-browser": "^22.0.6",
+    "@angular/router": "^22.0.6",
     "@primeuix/themes": "3.0.0-rc.1",
     "primeicons": "^7.0.0",
-    "primeng": "22.0.0-rc.1",
+    "primeng": "22.0.0-rc.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
