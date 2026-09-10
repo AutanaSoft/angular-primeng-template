@@ -44,6 +44,6 @@
     "tailwindcss": "^4.1.12",
     "tailwindcss-primeui": "^0.6.1",
     "typescript": "~6.0.2",
-    "vitest": "^4.0.8"
+    "vitest": "^4.1.11"
   }
 }
